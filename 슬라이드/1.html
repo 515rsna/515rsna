@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <style>
+        *{
+            margin: 0 auto; padding: 0;
+        }
+        body{
+            width: 320px;
+        }
+        header{
+            background-color: #513d3e;
+            width: 100%; height: 60px;
+            border-bottom: black solid 1px;
+        }
+        header>div{
+            width: 100%; height: 30px;
+        }
+        .header02{
+            text-align: center;
+        }
+        .header02>input{
+            width: 200px; height: 18px;
+            border-radius: 50px; border-style: none;
+        }
+        .header01>img{
+            width: 14px; height: 15px;
+        }
+        .headermenu01{
+            position: relative; left: 5px; top: 10px;
+        }
+        .headermenu02{
+            position: relative; left: 280px; top: 10px;
+            
+        }
+        /* ////////////////////////////////////////// */
+        .div01{
+            background-color: #513d3e;
+            width: 100%; height: 220px;
+            border-bottom: black solid 1px;
+            position: relative;
+
+        }
+        .div02{
+            background-color: #513d3e;
+            width: 100%; height: 260px;
+            border-bottom: black solid 1px;
+        }
+        table{
+            width: 100%; height: 260px;
+            text-align: center;
+        }
+        tr{
+            width: 100%; height: 25%;
+        }
+        .imgSlider{
+            position: relative; 
+            width: 320px; 
+            height: 220px; 
+            overflow: hidden; 
+            }
+
+        .imgSlider>img{
+            position: absolute; 
+            margin-left: -1000px;
+            }
+        .btn{
+            width: 30px; height: 30px;
+            border: white solid 1px;
+            border-radius: 50%;
+        }
+        .Left{
+            position:absolute;
+            top: 45%; left: 0;
+        }
+        .Right{
+            position:absolute;
+            top: 45%; right: 0;
+            
+        }
+        /* ////////////////////////////////////////// */
+        footer{
+            background-color: #a27a7c;
+            width: 100%; height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header01">
+            <img src="images/menu.png" class="headermenu01">
+            <img src="images/my.png" class="headermenu02">
+        </div>
+        <div class="header02">
+            <input type="text">
+        </div>
+    </header>
+    <div class="div01">
+            <div class="imgSlider">
+                <img src="images/images(1).jpg" alt="slide one" class="slide one" width="320px" height="100px">
+                <img src="images/images(2).jpg" alt="slide two" class="slide two" width="320px" height="100px">
+                <img src="images/images(3).jpg" alt="slide two" class="slide three" width="320px" height="100px">
+            </div>
+            <button class="btn Left"> &lt; </button>
+            <button class="btn Right"> &gt; </button>
+    </div>
+    <div class="div02">
+        <table>
+            <tr>
+                <td bgcolor="ed1c24">1</td>
+                <td bgcolor="f26522">2</td>
+                <td bgcolor="ed1c24">3</td>
+                <td bgcolor="f26522">4</td>
+            </tr>
+            <tr>
+                <td bgcolor="fff200">1</td>
+                <td bgcolor="39b54a">2</td>
+                <td bgcolor="fff200">3</td>
+                <td bgcolor="39b54a">4</td>
+            </tr>
+            <tr>
+                <td bgcolor="ed1c24">1</td>
+                <td bgcolor="f26522">2</td>
+                <td bgcolor="ed1c24">3</td>
+                <td bgcolor="f26522">4</td>
+            </tr>
+            <tr>
+                <td bgcolor="fff200">1</td>
+                <td bgcolor="39b54a">2</td>
+                <td bgcolor="fff200">3</td>
+                <td bgcolor="39b54a">4</td>
+            </tr>
+        </table>
+    </div>
+    <footer>
+    </footer>
+
+<script>
+    $(document).ready(function(){
+        var current = 0;
+        $('.imgSlider>img').eq(current).css('margin-left','-1000px').animate({'marginLeft':'0px'},1000);
+
+        $('button.Left').on('click',function(){
+            console.log("left click ==> " + current );            
+
+            $('.imgSlider>img').eq(current).css('margin-left','0px').animate({marginLeft:'-1000px'},1000);
+            current--;
+            if( current < 0 ){ current = 2; }
+            $('.imgSlider>img').eq(current).css('margin-left','1000px').animate({marginLeft:'0px'},1000);
+        });
+
+
+        $('button.Right').on('click',function(){
+            console.log("Right click");
+            $('.imgSlider>img').eq(current).css('margin-left','0px').animate({marginLeft:'-1000px'},1000);
+            current++;
+            if( current > 2 ){ current = 0; }
+            $('.imgSlider>img').eq(current).css('margin-left','1000px').animate({marginLeft:'0px'},1000);
+        });
+    })
+</script>
+</body>
+</html>
