@@ -6,26 +6,52 @@ body{
     width: 100%;
 }
 header{
-    height: 150px;
-}
-nav{
+    height: 100px;
     position: relative;
-    float: right;
-    height: 70px;
-    margin: 48px 24px 0 0;
-    right: 100px;
+    
 }
-nav li{
+header div{
+    position: absolute;
+    top: 50%; left: 10%;
+    font-size: 1.5em;
+    transform: translate(-50%,-50%);
+}
+header div span{
+    color: skyblue;
+}
+header ul{
+    position: absolute;
+    top: 50%; right: 5%;
+    transform: translate(-50%,-50%);
+}
+header ul li{
+    list-style: none;
     display: inline-block;
-    padding-left: 100px;
-
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
 }
 .main{
+    background-image: url(./sea.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: bisque;
     width: 100%; height: 200px;
 }
+.main p{
+    color: white;
+    font-size: 3em;
+    letter-spacing: 5px;
+}
 .subwrap{
-     width: 1150px; height: 1000px;
+     width: 1150px; 
+}
+.submenu{
+    margin: 2% 0;
+    font-weight: bold;
 }
 .submenu li{
     display: inline-block;
@@ -41,11 +67,10 @@ nav li{
 .port_01, .port_02, .port_03{
     width: 90%;
     margin: 0 auto;
-    
+    margin-top: 5%;
 }
 .port_01{
    display: block;
-    
 }
 .port_02{
     display: none;
@@ -58,12 +83,11 @@ nav li{
 }
 .image{
     background-color: lightblue;
-    width: 45%; height: 300px;
+    width: 31%; height: 300px;
     display: inline-block;
-    margin: 1%;
+    
     cursor: pointer;
-    margin-right: 35px;
-    margin-bottom: 70px;
+   
 }
 .img{
     padding-bottom: 20px;
@@ -84,13 +108,21 @@ nav li{
 }
 .button_style{
     width: 100%; height: 50px;
-    background-color: lightgreen;
+    background-color: cadetblue;
     margin-top: 300px;
-    
+}
+.image a{
+    color: white;
 }
 .clean{
     clear: both;
 }
 footer{
-    height: 150px;
+    margin-top: 64px;
+    height: 150px; background-color: rgb(66, 65, 68);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: snow;
 }
