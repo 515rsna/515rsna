@@ -44,13 +44,17 @@ nav li{
     
 }
 .port_01{
-    display: block;
+   display: block;
+    
 }
 .port_02{
     display: none;
 }
 .port_03{
     display: none;
+}
+.menu{
+    cursor: pointer;
 }
 .image{
     background-color: lightblue;

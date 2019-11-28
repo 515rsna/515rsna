@@ -6,7 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="jquery-3.4.1.min.js"></script>
+
+    <script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous"></script>
+    
 </head>
 <body>
     <header>
@@ -25,9 +30,9 @@
     <div class="subwrap">
         <div class="submenu">
             <ul>
-                <li class="menu1">menu1</li>
-                <li class="menu2">menu2</li>
-                <li class="menu3">menu3</li>
+                <li class="menu">menu1</li>
+                <li class="menu">menu2</li>
+                <li class="menu">menu3</li>
             </ul>
         </div>
         <div class="clean"></div>
@@ -36,13 +41,13 @@
                 <div class="image">
                     <div class="img01"></div>
                     <div class="button_style">
-                        <a href="#"></a>
+                        <a href="#">asd</a>
                     </div>
                 </div>
                 <div class="image">
                     <div class="img02"></div>
                     <div class="button_style">
-                        <a href="#"></a>
+                        <a href="#">asd</a>
                 </div>
                 </div>            
             </div>
@@ -50,13 +55,13 @@
                 <div class="image">
                     <div class="img03"></div>
                     <div class="button_style">
-                        <a href="#"></a>
+                        <a href="#">123</a>
                     </div>
                 </div>
                 <div class="image">
                     <div class="img04"></div>
                     <div class="button_style">
-                        <a href="#"></a>
+                        <a href="#">asd</a>
                     </div>
                 </div>
             </div>
@@ -64,17 +69,35 @@
                 <div class="image">
                     <div class="img05"></div>
                     <div class="button_style">
-                        <a href="#"></a>
+                        <a href="#">25245</a>
                     </div>
                 </div>
                 <div class="image">
                     <div class="img06"></div>
                     <div class="button_style">
-                        <a href="#"></a>
+                        <a href="#">asdasd</a>
                     </div>
                 </div>
             </div>
         </div>
     <footer></footer>
 </body>
+<script>
+    
+
+var menu = $('.menu');
+var content = $('.portfolio').children()
+for(let i = 0 ; i < 3 ; i++){
+    $(menu).eq(i).on('click',function (){
+        for(var a = 0 ; a < 3 ; a++){
+        content[a].style.display = 'none'
+        }
+        content[i].style.display = 'block'
+        
+
+    })
+    
+}
+
+</script>
 </html>
