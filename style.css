@@ -117,6 +117,7 @@ ul li a{
 }
 .image_button{
     text-align: center;
+    top: 10px;
 }
 .clean{
     clear: both;
