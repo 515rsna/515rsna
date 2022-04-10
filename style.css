@@ -115,6 +115,9 @@ ul li a{
 .image a{
     color: white;
 }
+.image_button{
+    text-align: center;
+}
 .clean{
     clear: both;
 }
